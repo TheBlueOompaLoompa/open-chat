@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Chat - Login</title>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCd6u92azqpIE_WhvMpt6DBuPhpwiPBvT4",
+            authDomain: "open-chat-2c635.firebaseapp.com",
+            projectId: "open-chat-2c635",
+            storageBucket: "open-chat-2c635.appspot.com",
+            messagingSenderId: "800421747938",
+            appId: "1:800421747938:web:809715eaa0d62f59c152bb",
+            measurementId: "G-P8LC4YFKCK"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/ui/4.7.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.7.1/firebase-ui-auth.css" />
+    <script type="text/javascript">
+        // FirebaseUI config.
+        var uiConfig = {
+            signInSuccessUrl: '/index.html',
+            signInOptions: [
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                firebase.auth.EmailAuthProvider.PROVIDER_ID,
+            ],
+            // TODO: add tos
+            tosUrl: '<your-tos-url>',
+            privacyPolicyUrl: function() {
+                // TODO: add privacy policy
+                window.location.assign('<your-privacy-policy-url>');
+            }
+        };
+  
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        // The start method will wait until the DOM is loaded.
+        ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+</head>
+<body>
+    <h1>Open Chat</h1>
+    <h2>Sign In</h2>
+
+    <div id="firebaseui-auth-container"></div>
+</body>
+</html>
