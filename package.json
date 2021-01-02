@@ -7,7 +7,8 @@
       "shell": "cd functions; npm run shell",
       "start": "cd functions; npm run start",
       "deploy": "cd functions; npm run deploy",
-      "logs": "cd functions; npm run logs"
+      "logs": "cd functions; npm run logs",
+      "fci": "cd functions; npm ci"
     },
     "private": true
 }
