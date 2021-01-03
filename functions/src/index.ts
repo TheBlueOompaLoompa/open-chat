@@ -33,7 +33,8 @@ export const setupUserDocment = functions.auth.user().onCreate(user => {
         userCollection.doc(user.uid).create({
             email: user.email,
             icon: user.photoURL,
-            name: user.displayName
+            name: user.displayName,
+            timestamp: Date.now()
         });
     }
 });
