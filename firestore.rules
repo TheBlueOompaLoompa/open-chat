@@ -7,7 +7,7 @@ service cloud.firestore {
       allow delete: if request.auth != null && request.auth.uid == request.resource.sender_uid;
     }
     match /users/{userId} {
-      allow create: if request.auth != null; && request.auth.uid == userId;
+      allow create: if request.auth != null && request.auth.uid == userId;
     }
   }
 }
