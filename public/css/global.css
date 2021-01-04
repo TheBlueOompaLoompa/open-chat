@@ -3,3 +3,9 @@ body {
     margin: 0;
     background-attachment: fixed;
 }
+
+@media ( max-width: 800px ) {
+    body {
+        margin-left:24px;
+    }
+}
