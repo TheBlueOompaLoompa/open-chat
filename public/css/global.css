@@ -9,3 +9,9 @@ body {
         margin-left: calc(26px);
     }
 }
+
+@media ( max-width: 800px ) {
+    main {
+        margin: 8px;
+    }
+}
