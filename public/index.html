@@ -32,7 +32,12 @@
     </script>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="img/icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css">
+    <div id="bootstrap-lazy"></div>
+    <script>
+        window.on = function(){
+            document.getElementById("bootstrap-lazy").innerHTML = `<link rel="stylesheet" href="img/icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" loading="lazy">`;
+        }
+    </script>
 </head>
 <body>
     <main>
