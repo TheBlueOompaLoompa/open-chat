@@ -4,8 +4,8 @@ body {
     background-attachment: fixed;
 }
 
-@media ( max-width: 800px ) {
+@media ( min-width: 800px ) {
     body {
-        margin-left:24px;
+        margin-left: calc(26px);
     }
 }
