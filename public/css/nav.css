@@ -28,7 +28,7 @@
 nav {
     display: flex;
     flex-direction: var(--nav-direction);
-    position: absolute;
+    position: fixed;
 }
 
 nav a {
