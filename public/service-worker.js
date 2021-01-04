@@ -4,8 +4,8 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.0.2/workbox
 workbox.routing.registerRoute(
     // Check to see if the request is a navigation to a new page
     ({ request }) => request.mode === 'navigate',
-    // Use a Network First caching strategy
-    new workbox.strategies.NetworkFirst({
+    // Use a Cache First caching strategy
+    new workbox.strategies.CacheFirst({
     // Put all cached files in a cache named 'pages'
     cacheName: 'pages',
     plugins: [
