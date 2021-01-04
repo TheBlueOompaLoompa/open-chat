@@ -6,7 +6,6 @@ body {
 
 .frost {
     background: inherit;
-    border-top: solid rgb(185, 185, 185) .2px;
 }
 
 .frost:before {

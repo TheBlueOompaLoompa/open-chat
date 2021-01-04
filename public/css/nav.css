@@ -29,6 +29,7 @@ nav {
     display: flex;
     flex-direction: var(--nav-direction);
     position: fixed;
+    border-top: solid rgb(185, 185, 185) .2px;
 }
 
 nav a {
