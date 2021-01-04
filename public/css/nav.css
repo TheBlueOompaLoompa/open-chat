@@ -29,6 +29,10 @@ nav {
     display: flex;
     flex-direction: var(--nav-direction);
     position: fixed;
+    border: 0px;
+    color: rgb(199, 199, 204);
+    border-top: 1px;
+    border-style: ridge;
 }
 
 nav a {
