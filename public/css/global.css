@@ -6,7 +6,7 @@ body {
 
 @media ( min-width: 800px ) {
     body {
-        margin-left: calc(26px);
+        margin-left: calc(36px);
     }
 }
 

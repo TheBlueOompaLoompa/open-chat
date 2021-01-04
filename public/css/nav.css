@@ -20,7 +20,9 @@
     nav {
         top: 0rem;
         left: 0;
+        width: 2rem;
         justify-content: space-evenly;
+        align-items: center;
         height: 100%;
     }
 }
