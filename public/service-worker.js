@@ -1,7 +1,7 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.0.2/workbox-sw.js');
 
 // Cache page navigations (html) with a Network First strategy
-workbox.registerRoute(
+workbox.routing.registerRoute(
     // Check to see if the request is a navigation to a new page
     ({ request }) => request.mode === 'navigate',
     // Use a Network First caching strategy
@@ -10,7 +10,7 @@ workbox.registerRoute(
     cacheName: 'pages',
     plugins: [
         // Ensure that only requests that result in a 200 status are cached
-        new workbox.CacheableResponsePlugin({
+        new workbox.cacheableResponse.CacheableResponsePlugin({
         statuses: [200],
         }),
     ],
@@ -18,7 +18,7 @@ workbox.registerRoute(
 );
 
 // Cache CSS, JS, and Web Worker requests with a Stale While Revalidate strategy
-workbox.registerRoute(
+workbox.routing.registerRoute(
     // Check to see if the request's destination is style for stylesheets, script for JavaScript, or worker for web worker
     ({ request }) =>
     request.destination === 'style' ||
@@ -30,7 +30,7 @@ workbox.registerRoute(
     cacheName: 'assets',
     plugins: [
         // Ensure that only requests that result in a 200 status are cached
-        new workbox.CacheableResponsePlugin({
+        new workbox.cacheableResponse.CacheableResponsePlugin({
         statuses: [200],
         }),
     ],
@@ -38,7 +38,7 @@ workbox.registerRoute(
 );
 
 // Cache images with a Cache First strategy
-workbox.registerRoute(
+workbox.routing.registerRoute(
     // Check to see if the request's destination is style for an image
     ({ request }) => request.destination === 'image',
     // Use a Cache First caching strategy
@@ -47,11 +47,11 @@ workbox.registerRoute(
     cacheName: 'images',
     plugins: [
         // Ensure that only requests that result in a 200 status are cached
-        new workbox.CacheableResponsePlugin({
+        new workbox.cacheableResponse.CacheableResponsePlugin({
         statuses: [200],
         }),
         // Don't cache more than 50 items, and expire them after 30 days
-        new workbox.ExpirationPlugin({
+        new workbox.expiration.ExpirationPlugin({
         maxEntries: 50,
         maxAgeSeconds: 60 * 60 * 24 * 30, // 30 Days
         }),
