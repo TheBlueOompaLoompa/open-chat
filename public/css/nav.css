@@ -4,7 +4,7 @@
     }
 
     nav {
-        bottom: 0.2rem;
+        bottom: 0rem;
         width: 100%;
         height: 2rem;
         justify-content: space-evenly;
@@ -17,7 +17,7 @@
     }
 
     nav {
-        top: 0.2rem;
+        top: 0rem;
         left: 0.2rem;
         justify-content: space-evenly;
         min-height: 10%;
@@ -30,6 +30,8 @@ nav {
     flex-direction: var(--nav-direction);
     position: fixed;
     border-top: solid rgb(185, 185, 185) .2px;
+
+    background-color: rgba(0, 0, 0, 255);
 }
 
 nav a {
