@@ -3,3 +3,15 @@ body {
     margin: 0;
     background-attachment: fixed;
 }
+
+@media ( min-width: 800px ) {
+    body {
+        margin-left: calc(26px);
+    }
+}
+
+@media ( max-width: 800px ) {
+    main {
+        margin: 8px;
+    }
+}
