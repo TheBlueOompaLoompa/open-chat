@@ -1,0 +1,31 @@
+@media ( max-width : 800px ) {
+    :root {
+        --nav-direction: row;
+    }
+
+    nav {
+        bottom: 0.2rem;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+}
+
+@media ( min-width : 800px ) {
+    :root {
+        --nav-direction: column;
+    }
+
+    nav {
+        top: 0.2rem;
+        left: 0.2rem;
+        justify-content: space-evenly;
+        min-height: 10%;
+        max-height: 20%;
+    }
+}
+
+nav {
+    display: flex;
+    flex-direction: var(--nav-direction);
+    position: absolute;
+}
