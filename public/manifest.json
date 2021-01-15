@@ -1,7 +1,7 @@
 {
     "name": "Open Chat",
     "short_name": "Open Chat",
-    "start_url": "/",
+    "start_url": "/index.html",
     "icons": [
         {
             "src": "/icons/manifest-icon-192.png",
