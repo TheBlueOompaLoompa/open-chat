@@ -19,6 +19,7 @@
             appId: "1:800421747938:web:809715eaa0d62f59c152bb",
             measurementId: "G-P8LC4YFKCK"
         };
+        firebase.initializeApp(firebaseConfig);
         let auth = firebase.auth();
         let db = firebase.firestore();
         auth.onAuthStateChanged(user => {
