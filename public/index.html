@@ -9,7 +9,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
 
-    <script src="js/lib/encryption.min.js"></script>
+    <script src="js/lib/arraybufferconv.js"></script>
     <script src="js/msgencrypt.js"></script>
 
     <script>
@@ -80,6 +80,12 @@
         </a>
         <script>document.getElementsByClassName("active")[0].setAttribute("fill", "rgb(10,132,255)")</script>
     </nav>
+    <div id="keything">
+        <input type="password" id="password">
+        <button id="genkey">Generate Key</button>
+    </div>
+    <!-- TODO: Add key download -->
+    <script src="js/messages.js"></script>
 
     <script>
         if ('serviceWorker' in navigator) {
